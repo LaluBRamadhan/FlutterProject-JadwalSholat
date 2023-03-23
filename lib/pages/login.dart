@@ -46,7 +46,7 @@ class Login extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                if (email.text == "Hello" && pass.text == "123") {
+                if (email.text == "rama" && pass.text == "128") {
                   print("Log in Succesfull...");
                   showDialog(
                     context: context,
