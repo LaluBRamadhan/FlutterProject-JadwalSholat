@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+
 class Login extends StatelessWidget {
   const Login({
     super.key,
@@ -16,18 +17,18 @@ class Login extends StatelessWidget {
       body: Center(
         child: ListView(
           //mainAxisAlignment: MainAxisAlignment.center,
-          padding: EdgeInsets.all(30),
+          padding: const EdgeInsets.all(30),
           children: [
             TextField(
               controller: email,
               autocorrect: false,
               decoration: InputDecoration(
-                  labelText: "Email",
+                  labelText: "Username",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10))),
               keyboardType: TextInputType.emailAddress,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TextField(
@@ -41,7 +42,7 @@ class Login extends StatelessWidget {
               keyboardType: TextInputType.text,
               obscureText: true,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             ElevatedButton(
@@ -54,11 +55,11 @@ class Login extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
 //                    title: Text("Alert"),
-                      content: Text("Login Succesfull"),
+                      content: const Text("Login Succesfull"),
                     ),
                   );
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Home(),
+                    builder: (context) => const Home(),
                   ));
                 } else {
                   print("Failed to Log in...");
@@ -68,17 +69,17 @@ class Login extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
 //                   title: Text("Dialog"),
-                      content: Text("Login Failed"),
+                      content: const Text("Login Failed"),
                     ),
                   );
                 }
               },
-              child: Text("Log In"),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
               ),
+              child: const Text("Log In"),
             ),
           ],
         ),
