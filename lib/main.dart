@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
-import 'pages/Login.dart';
+import 'pages/login.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Homepage(),
     );
@@ -31,7 +31,7 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return Login(email: email, pass: pass);
+    return Loginpage(email: email, pass: pass);
   }
 }
 

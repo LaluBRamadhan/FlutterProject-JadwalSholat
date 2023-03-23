@@ -7,7 +7,7 @@ import 'package:intl/intl.dart' as intl;
 
 String getDate() {
   DateTime now = DateTime.now();
-  String formattedDate = intl.DateFormat('yyyy-MM-dd HH:mm:ss').format(now);
+  String formattedDate = intl.DateFormat('yyyy-MM-dd').format(now);
   return formattedDate;
 }
 
@@ -85,10 +85,11 @@ class _HomeState extends State<Home> {
                     var myResponse = await http.get(Uri.parse(
                         "https://api.banghasan.com/sholat/format/json/jadwal/kota/703/tanggal/$currentDate"));
                     if (myResponse.statusCode == 200) {
-                      print("Connected");
+                      //print("Connected");
                       Map<String, dynamic> data =
                           json.decode(myResponse.body) as Map<String, dynamic>;
-                      print(data["hasil"]);
+                      //print(data["hasil"]);
+                      //print(currentDate);
                       setState(() {
                         tanggal = data['jadwal']['data']['tanggal'].toString();
                         subuh = data['jadwal']['data']['subuh'].toString();
@@ -98,17 +99,17 @@ class _HomeState extends State<Home> {
                         isya = data['jadwal']['data']['isya'].toString();
                       });
                     } else {
-                      const Text("Failed To Connect");
+                      //something in the future
                     }
                   },
-                  child: Text("GetData")),
+                  child: const Text("Refresh")),
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop(MaterialPageRoute(
-                      builder: (context) => Homepage(),
+                      builder: (context) => const Homepage(),
                     ));
                   },
-                  child: Text("Back")),
+                  child: const Text("Back")),
             ],
           )
         ],

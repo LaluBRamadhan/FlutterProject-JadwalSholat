@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 
-class Login extends StatelessWidget {
-  const Login({
+class Loginpage extends StatelessWidget {
+  const Loginpage({
     super.key,
     required this.email,
     required this.pass,
@@ -23,7 +23,7 @@ class Login extends StatelessWidget {
               controller: email,
               autocorrect: false,
               decoration: InputDecoration(
-                  labelText: "Username",
+                  labelText: "Email",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10))),
               keyboardType: TextInputType.emailAddress,
@@ -47,7 +47,7 @@ class Login extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                if (email.text == "rama" && pass.text == "128") {
+                if (email.text == "rama" && pass.text == "123") {
                   print("Log in Succesfull...");
                   showDialog(
                     context: context,
@@ -62,7 +62,7 @@ class Login extends StatelessWidget {
                     builder: (context) => const Home(),
                   ));
                 } else {
-                  print("Failed to Log in...");
+                  //print("Failed to Log in...");
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
@@ -75,7 +75,7 @@ class Login extends StatelessWidget {
                 }
               },
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
               ),
