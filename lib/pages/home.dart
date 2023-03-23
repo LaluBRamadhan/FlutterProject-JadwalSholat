@@ -49,32 +49,32 @@ class _HomeState extends State<Home> {
         children: [
           Text(
             "Jadwal Solat $tanggal",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text("subuh : $subuh",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               )),
           Text("dzuhur : $dzuhur",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               )),
           Text("ashar : $ashar",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               )),
           Text("maghrib : $maghrib",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               )),
           Text("isya : $isya",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               )),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
                         isya = data['jadwal']['data']['isya'].toString();
                       });
                     } else {
-                      print("Failed to connect");
+                      const Text("Failed To Connect");
                     }
                   },
                   child: Text("GetData")),
