@@ -1,16 +1,36 @@
-# static_login_page_with_http
+# Aplikasi Flutter Jadwal Sholat
+###### Aplikasi ini memungkinkan pengguna untuk melihat jadwal sholat pada hari saat pengguna mengaksesnya. Aplikasi ini juga memiliki tombol "getData" untuk mengambil data dari API jadwal sholat. Aplikasi ini dibangun dengan menggunakan bahasa pemrograman Flutter dan menggunakan API dari Banghasan.com.
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-A new Flutter project.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Login page dengan autentikasi statis
+- Menampilkan jadwal sholat pada hari saat pengguna mengakses aplikasi
+- Tombol "getData" untuk mengambil data dari API
+- Tampilan jadwal sholat yang informatif dan mudah dibaca
+- Tombol "Refresh" untuk memperbarui data jadwal sholat
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+git clone https://github.com/nama-user/nama-repo.git
+```
+
+## Development
+
+Want to contribute? Great!
+Jika Anda ingin berkontribusi pada proyek ini, silakan ajukan permintaan pull request dengan perubahan yang diinginkan.
+
+## License
+
+MIT
+**Free Software, Hell Yeah!**
+
+
