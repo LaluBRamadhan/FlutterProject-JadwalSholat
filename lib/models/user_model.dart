@@ -10,40 +10,68 @@ String userModelToJson(UserModel data) => json.encode(data.toJson());
 
 class UserModel {
     UserModel({
-        required this.nomor,
-        required this.nama,
-        required this.name,
-        required this.ayat,
-        required this.type,
-        required this.arti,
-        required this.keterangan,
+        required this.jadwal,
     });
 
-    String nama;
-    String name;
-    String nomor;
-    String ayat;
-    String type;
-    String arti;
-    String keterangan;
+    Jadwal jadwal;
 
     factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-        nomor: json["nomor"],
-        nama: json["nama"],
-        name: json["name"],
-        ayat: json["ayat"],
-        type: json["type"],
-        arti: json["arti"],
-        keterangan: json["keterangan"],
+        jadwal: Jadwal.fromJson(json["jadwal"]),
     );
 
     Map<String, dynamic> toJson() => {
-        "nomor": nomor,
-        "nama": nama,
-        "name": name,
-        "ayat": ayat,
-        "type": type,
-        "arti": arti,
-        "keterangan": keterangan,
+        "jadwal": jadwal.toJson(),
+    };
+}
+
+class Jadwal {
+    Jadwal({
+        required this.data,
+    });
+
+    Data data;
+
+    factory Jadwal.fromJson(Map<String, dynamic> json) => Jadwal(
+        data: Data.fromJson(json["data"]),
+    );
+
+    Map<String, dynamic> toJson() => {
+        "data": data.toJson(),
+    };
+}
+
+class Data {
+    Data({
+        required this.subuh,
+        required this.dzuhur,
+        required this.ashar,
+        required this.maghrib,
+        required this.isya,
+        required this.tanggal,
+    });
+
+    String subuh;
+    String dzuhur;
+    String ashar;
+    String maghrib;
+    String isya;
+    String tanggal;
+
+    factory Data.fromJson(Map<String, dynamic> json) => Data(
+        subuh: json["subuh"],
+        dzuhur: json["dzuhur"],
+        ashar: json["ashar"],
+        maghrib: json["maghrib"],
+        isya: json["isya"],
+        tanggal: json["tanggal"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "subuh": subuh,
+        "dzuhur": dzuhur,
+        "ashar": ashar,
+        "maghrib": maghrib,
+        "isya": isya,
+        "tanggal": tanggal,
     };
 }
