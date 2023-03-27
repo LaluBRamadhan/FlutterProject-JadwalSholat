@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
         children: [
           Text(
             "Jadwal Solat $tanggal",
-            style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 10,
@@ -81,6 +81,9 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal[300],
+                ),
                   onPressed: () async {
                     var myResponse = await http.get(Uri.parse(
                         "https://api.banghasan.com/sholat/format/json/jadwal/kota/703/tanggal/$currentDate"));
@@ -104,6 +107,9 @@ class _HomeState extends State<Home> {
                   },
                   child: const Text("Refresh")),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal[300],
+                ),
                   onPressed: () {
                     Navigator.of(context).pop(MaterialPageRoute(
                       builder: (context) => const Homepage(),
