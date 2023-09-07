@@ -20,7 +20,7 @@
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-git clone https://github.com/LaluBRamadhan/Jadwal.Solat.git
+git clone https://github.com/LaluBRamadhan/FlutterProject-JadwalSholat
 ```
 
 ## Development
